@@ -16,7 +16,7 @@
   </p>
   <p>
     <sub>
-      Feito com ❤︎ pelo
+      Feito com ❤︎ e
      <a href="https://alanprates.com.br">
         com muito orgulho
       </a>

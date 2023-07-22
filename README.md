@@ -17,7 +17,7 @@
   <p>
     <sub>
       Feito com ❤︎ pelo
-      <a href="alanprates.com.br">
+     < a href="https://i.imgur.com/n1LKcoz.gifv" target="_blank">
         com muito orgulho
       </a>
     </sub>

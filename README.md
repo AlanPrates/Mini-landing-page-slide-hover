@@ -17,7 +17,7 @@
   <p>
     <sub>
       Feito com ❤︎ pelo
-     < a href="https://i.imgur.com/n1LKcoz.gifv" target="_blank">
+     < a href="https://i.imgur.com/n1LKcoz.gifv">
         com muito orgulho
       </a>
     </sub>

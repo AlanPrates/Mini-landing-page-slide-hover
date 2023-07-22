@@ -15,7 +15,14 @@
     </h3>
   </p>
   <p>
-
+    <sub>
+      Feito com ❤︎ pelo
+      <a href="alanprates.com.br">
+        com muito orgulho
+      </a>
+    </sub>
+  </p>
+  <br />
   <p>
     <a href="https://i.imgur.com/n1LKcoz.gifv" target="_blank">
       <img

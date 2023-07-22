@@ -17,7 +17,7 @@
   <p>
 
   <p>
-    <a href="https://menthor.io/?ref=github" target="_blank">
+    <a href="https://i.imgur.com/n1LKcoz.gifv" target="_blank">
       <img
         src="https://github.com/AlanPrates/Mini-landing-page-slide-hover/blob/ee054dcae0c5c2a9b525444ac5ff2966cbbe6de5/gif/22-7-2023_05339_127.0.0.1.jpeg"
         alt="Menthor"

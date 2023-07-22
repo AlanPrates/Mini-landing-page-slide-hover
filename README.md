@@ -16,7 +16,7 @@
   </p>
   <p>
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fmenthor.io&logo=menthor)](https://alanprates.com.br)
-<a href="[[https://menthor.io/?ref=github](https://i.imgur.com/n1LKcoz.gifv](https://github.com/AlanPrates/Mini-landing-page-slide-hover/blob/ee054dcae0c5c2a9b525444ac5ff2966cbbe6de5/gif/22-7-2023_05339_127.0.0.1.jpeg)https://github.com/AlanPrates/Mini-landing-page-slide-hover/blob/ee054dcae0c5c2a9b525444ac5ff2966cbbe6de5/gif/22-7-2023_05339_127.0.0.1.jpeg)" target="_blank">
+<a href="[[https://menthor.io/?ref=github]([https://i.imgur.com/n1LKcoz.gifv](https://github.com/AlanPrates/Mini-landing-page-slide-hover/blob/main/gif/22-7-2023_05339_127.0.0.1.jpeg?raw=true)]" target="_blank">
       <img
         src="https://i.imgur.com/ejqNDDe.jpg"
         alt="Menthor"

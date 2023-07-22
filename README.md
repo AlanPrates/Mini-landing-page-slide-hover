@@ -10,15 +10,18 @@
   <p>
     <h3>
       <b>
-        Menthor
+        Alan Prates
       </b>
     </h3>
   </p>
   <p>
 
-<a href="[[](https://github.com/AlanPrates/Mini-landing-page-slide-hover/blob/main/gif/22-7-2023_05339_127.0.0.1.jpeg?raw=true]" target="_blank">
+  <p>
+    <a href="https://menthor.io/?ref=github" target="_blank">
       <img
-        src="[https://i.imgur.com/ejqNDDe.jpg](https://github.com/AlanPrates/Mini-landing-page-slide-hover/blob/main/gif/22-7-2023_05339_127.0.0.1.jpeg?raw=true)https://github.com/AlanPrates/Mini-landing-page-slide-hover/blob/main/gif/22-7-2023_05339_127.0.0.1.jpeg?raw=true]"
+        src="https://github.com/AlanPrates/Mini-landing-page-slide-hover/blob/ee054dcae0c5c2a9b525444ac5ff2966cbbe6de5/gif/22-7-2023_05339_127.0.0.1.jpeg"
         alt="Menthor"
         width="100%"
       />
+    </a>
+  </p>

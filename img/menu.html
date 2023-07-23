@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Slide e Menu com Submenu</title>
+<style>
+/* Estilos gerais do body */
+body {
+  background: #020E39; /* Cor de fundo do body */
+  font-family: Arial, sans-serif; /* Fonte padrão do texto */
+  margin: 0; /* Remove as margens padrão */
+  padding: 0; /* Remove o espaçamento padrão */
+}
+
+/* Estilos para o menu com submenu */
+nav {
+  background-image: linear-gradient(to bottom, #07176E, #07176E); /* Gradiente de fundo do menu */
+}
+
+/* Estilos para a lista de itens do menu */
+.menu {
+  list-style-type: none; /* Remove os pontos de lista */
+  padding: 0; /* Remove o espaçamento interno padrão */
+  margin: 0; /* Remove as margens padrão */
+  display: flex; /* Exibe os itens do menu em linha (horizontal) */
+}
+
+.menu li {
+  list-style-type: none; /* Remove os pontos de lista */
+  padding: 15px; /* Espaçamento interno entre os itens do menu */
+}
+
+.menu li a {
+  color: #fff; /* Cor do texto dos itens do menu */
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.menu li a:hover {
+  background-color: #07176E; /* Cor de fundo ao passar o mouse sobre os itens do menu */
+}
+
+/* Estilos para os submenus */
+.submenu {
+  position: relative; /* Define a posição relativa para posicionar o submenu */
+}
+
+.submenu-list {
+  display: none; /* Esconde o submenu por padrão */
+  position: absolute; /* Define a posição absoluta para o submenu */
+  top: 100%; /* Posiciona o submenu abaixo do item pai */
+  left: 0; /* Alinha o submenu à esquerda */
+  background-color: #07176E; /* Cor de fundo do submenu */
+}
+
+.submenu:hover .submenu-list {
+  display: block; /* Exibe o submenu ao passar o mouse sobre o item pai */
+}
+
+.submenu-list li {
+  padding: 10px; /* Espaçamento interno entre os itens do submenu */
+}
+
+.submenu-list li a {
+  color: #fff; /* Cor do texto dos itens do submenu */
+  text-decoration: none; /* Remove o sublinhado dos links do submenu */
+}
+
+.submenu-list li a:hover {
+  background-color: #07176E; /* Cor de fundo ao passar o mouse sobre os itens do submenu */
+}
+
+/* Estilos para o slideshow de fotos */
+.slideshow-container {
+  max-width: 800px; /* Largura máxima do slideshow */
+  margin: 120px auto; /* Centraliza o slideshow horizontalmente no meio da página */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa o container */
+  position: relative; /* Define a posição relativa para posicionar os controles do slideshow */
+}
+
+.slide {
+  display: none; /* Esconde os slides por padrão */
+  animation: fade 1s ease-in-out; /* Animação para o efeito de transição entre os slides */
+}
+
+.slide img {
+  width: 100%; /* Tamanho total das imagens */
+  height: auto; /* Mantém a proporção da imagem */
+  border: 3px solid #000; /* Borda de 3px sólida preta */
+  transition: transform 0.6s ease-in-out; /* Transição suave para o efeito hover */
+}
+
+/* Efeito ao passar o mouse sobre as imagens */
+.image-grid img:hover,
+.slideshow-container img:hover {
+  transform: scale(1.1); /* Aumenta a escala das imagens em 10% */
+}
+
+/* Estilos para os controles do slideshow */
+.prev,
+.next {
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  position: absolute; /* Define a posição absoluta para posicionar os controles */
+  top: 50%; /* Posiciona os controles no meio verticalmente */
+  transform: translateY(-50%); /* Centraliza verticalmente os controles */
+  padding: 10px; /* Espaçamento interno dos controles */
+  background-color: 022cff; /* Cor de fundo dos controles */
+  color: #fff; /* Cor do texto dos controles */
+  border: none; /* Remove a borda dos controles */
+  font-size: 24px; /* Tamanho do ícone */
+  opacity: 0.8; /* Opacidade dos controles por padrão */
+}
+
+.next {
+  right: 0; /* Alinha o botão "next" à direita */
+}
+
+.prev:hover,
+.next:hover {
+  opacity: 1; /* Aumenta a opacidade dos controles ao passar o mouse sobre eles */
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4; /* Opacidade inicial dos slides */
+  }
+  to {
+    opacity: 1; /* Opacidade final dos slides */
+  }
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .slideshow-container {
+    max-width: 100%; /* Largura máxima de 100% em dispositivos móveis */
+  }
+
+  .prev,
+  .next {
+    font-size: 20px; /* Tamanho do ícone reduzido em dispositivos móveis */
+  }
+}
+
+/* Estilos para a grade de imagens */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas de tamanho igual */
+  gap: 20px; /* Espaçamento entre as imagens */
+  max-width: 800px; /* Definindo o tamanho máximo da grid */
+  margin: 20px auto; /* Centralizando a grid horizontalmente */
+}
+
+.image-grid img {
+  width: 100%; /* Tamanho reduzido das imagens */
+  height: auto; /* Mantendo a proporção da imagem */
+  border: 1px solid #000; /* Adicionando borda de 1px sólida preta */
+  transition: transform 0.6s ease-in-out; /* Transição suave para o efeito hover */
+}
+
+/* Estilos para o rodapé */
+footer {
+  background-image: linear-gradient(to bottom, #1a237e, #3949ab); /* Gradiente de fundo do rodapé */
+  padding: 20px 0; /* Espaçamento interno do rodapé */
+  background-color: #333; /* Cor de fundo do rodapé */
+  color: #fff; /* Cor do texto do rodapé */
+  text-align: center; /* Alinhamento do texto no centro do rodapé */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons {
+  margin-top: 10px; /* Espaçamento entre os ícones sociais */
+}
+
+.social-icon {
+  color: #fff; /* Cor dos ícones sociais */
+  font-size: 24px; /* Tamanho dos ícones sociais */
+  margin: 0 10px; /* Espaçamento entre os ícones sociais */
+  text-decoration: none; /* Remove o sublinhado dos ícones sociais */
+}
+
+.social-icon:hover {
+  color: #aaa; /* Cor dos ícones sociais ao passar o mouse sobre eles */
+}
+
+/* Restante do código CSS anterior (mantenha-o) */
+
+/* Efeito ao passar o mouse sobre o título "Soluções" */
+h3 {
+  text-align: center;
+  width: fit-content;
+  background-color: #1a237e;
+  color: #fff;
+  padding: 10px;
+  margin: 0 auto;
+  transition: transform 0.6s ease-in-out; /* Transição suave para o efeito hover */
+}
+
+h3:hover {
+  transform: scale(1.4); /* Aumenta a escala do título em 5% ao passar o mouse */
+}
+
+
+</style>
+</head>
+<body>
+  <nav>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li class="submenu">
+        <a href="#">Serviços</a>
+        <ul class="submenu-list">
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Desenvolvimento Web</a></li>
+          <li><a href="#">SEO</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="img/8-career-timeline-cv___media_library_original_1600_900.jpg" alt="Foto 1">
+    </div>
+    <div class="slide fade">
+      <img src="img/5-career-timeline-cv___media_library_original_1600_900.jpg">
+    </div>
+    <div class="slide fade">
+      <img src="img/0-career-timeline-cv___media_library_original_1600_900.jpg">
+    </div>
+
+    <a class="prev" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></a>
+    <a class="next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></a>
+  </div>
+<h3>Soluções</h3>
+  <div class="image-grid">
+    <img src="img/9-career-timeline-cv___media_library_original_1600_900.jpg" alt="Imagem 1">
+    <img src="img/7-career-timeline-cv___media_library_original_1600_900.jpg" alt="Imagem 2">
+    <img src="img/6-career-timeline-cv___media_library_original_1600_900.jpg" alt="Imagem 3">
+    <img src="img/4-career-timeline-cv___media_library_original_1600_900.jpg" alt="Imagem 4">
+  </div>
+
+  <script src="script.js"></script>
+  <script>let slideIndex = 0;
+showSlide(slideIndex);
+
+function showSlide(index) {
+  const slides = document.getElementsByClassName('slide');
+
+  if (index >= slides.length) {
+    slideIndex = 0;
+  }
+
+  if (index < 0) {
+    slideIndex = slides.length - 1;
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+
+  slides[slideIndex].style.display = 'block';
+}
+
+function nextSlide() {
+  showSlide(slideIndex += 1);
+}
+
+function prevSlide() {
+  showSlide(slideIndex -= 1);
+}
+
+setInterval(nextSlide, 3000); // Troca a cada 3 segundos (3000 ms)
+</script>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Todos os direitos reservados &copy; 2023</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
